@@ -9,7 +9,7 @@ const config = require('./config');
 const { Message, OpType, Location } = require('../curve-thrift/line_types');
 //let exec = require('child_process').exec;
 
-const myBot = ['ueacedbe88bf6e2c5cf6188b3a4a26e18','u5a8f1f79740e3dc876a13ab7f7381340'];
+const myBot = ['ud24af63fd62d14c3bf8f719df80c3745'];
 const banList = [];//Banned list
 var groupList = new Array();//Group list
 var vx = {};var midnornama,pesane,kickhim;var waitMsg = "no";//DO NOT CHANGE THIS
@@ -62,46 +62,46 @@ class LINE extends LineAPI {
 			qr: 0, //0 = Gk boleh, 1 = Boleh
 			salam: 1 //1 = Yes, 0 = No
         }
-		this.keyhelp = "\n\
+		this.keyhelp = "          ✯✯❇Thailand❇✯✯\n     ✯❇͜͡C͜͡r͜͡e͜͡a͜͡t͜͡o͜͡r ͜͡$͜͡ë͜͡I͜͡F͜͡-͜͡฿͜͡o͜͡Ŧ❇✯\n\
 ====================\n\
-# Keyword List\n\n\
-=> !addcontact *ADMIN*\n\
-=> !adminutil *ADMIN*\n\
-=> !animesearch\n\
-=> !ban *ADMIN*\n\
-=> !banlist\n\
-=> !botcontact\n\
-=> !botleft *ADMIN*\n\
-=> broadcast *ADMIN*\n\
-=> !cancel\n\
-=> !cekid\n\
-=> !curl\n\
-=> !getimage\n\
-=> !ginfo\n\
-=> !grouputil *ADMIN*\n\
-=> !gURL\n\
-=> !halo\n\
-=> !kepo\n\
-=> !key\n\
-=> !kickban *ADMIN*\n\
-=> !kickall *ADMIN*\n\
-=> !kickme\n\
-=> !msg\n\
-=> !mute *ADMIN*\n\
-=> !myid\n\
-=> !refresh *ADMIN*\n\
-=> !sendcontact\n\
-=> !setting\n\
-=> !sms\n\
-=> !speed\n\
-=> !tagall\n\
-=> !tts\n\
-=> !unmute *ADMIN*\n\
-=> !unban *ADMIN*\n\
-=> !whattime\n\
-=> !yousound\n\
-=> !youtube\n\
-\n\n# http://line.me/ti/p/4bvwOIMft8  ^_^";
+❇️ !addcontact *ADMIN*\n\
+❇️ !adminutil *ADMIN*\n\
+❇️ !botleft *ADMIN*\n\
+❇ ️broadcast *ADMIN*\n\
+❇️ !grouputil *ADMIN*\n\
+❇️ !kickban *ADMIN*\n\
+❇️ !kickall *ADMIN*\n\
+❇️ !refresh *ADMIN*\n\
+❇️ !unmute *ADMIN*\n\
+❇️ !unban *ADMIN*\n\
+❇️ !mute *ADMIN*\n\
+❇️ !animesearch\n\
+❇️ !ban *ADMIN*\n\
+❇️ !botcontact\n\
+❇️ !banlist\n\
+❇️ !cancel\n\
+❇️ !cekid\n\
+❇️ !curl\n\
+❇️ !getimage\n\
+❇️ !ginfo\n\
+❇️ !gURL\n\
+❇️ !halo\n\
+❇️ !kepo\n\
+❇️ !help\n\
+❇️ !kickme\n\
+❇️ !msg\n\
+❇️ !mid\n\
+❇️ !sendcontact\n\
+❇ ️!setting\n\
+❇️ !sms\n\
+❇️ !speed\n\
+❇️ !tagall\n\
+❇️ !tts\n\
+❇️ !whattime\n\
+❇️ !yousound\n\
+❇️ !youtube\n\
+�️JS�\n️•─ ͜͡✫ѕєʟғвот﴾ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅﴿κɪcκєʀ ͜͡✫─•\n\
+http://line.me/ti/p/~1ove..neverdie 👀";
         var that = this;
     }
 
@@ -139,7 +139,7 @@ class LINE extends LineAPI {
 		if(operation.type == 16 && this.stateStatus.salam == 1){//join group
 			let halo = new Message();
 			halo.to = operation.param1;
-			halo.text = "Halo, Salam Kenal ^_^ !";
+			halo.text = "Hello, (*´﹃｀*) !";
 			this._client.sendMessage(0, halo);
 		}
 		
@@ -147,7 +147,7 @@ class LINE extends LineAPI {
 		    let halobos = new Message();
 			halobos.to = operation.param1;
 			halobos.toType = 2;
-			halobos.text = "Halo bos !, selamat datang di group ini bos !";
+			halobos.text = "Hello.. Mr.bos!!  J.S : 􀰂􀰂﴾ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅﴿􏿿  ";
 			this._client.sendMessage(0, halobos);
 		}else if(operation.type == 17 && this.stateStatus.salam == 1){//ada yang join
 			let seq = new Message();
@@ -173,7 +173,7 @@ class LINE extends LineAPI {
 		if(operation.type == 5 && this.stateStatus.salam == 1) {//someone adding me..
             let halo = new Message();
 			halo.to = operation.param1;
-			halo.text = "Creator: line.me/ti/p/4bvwOIMft8 (~GoogleX)";
+			halo.text = "􀰂􀰂﴾ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅﴿􏿿 Creator : line.me/ti/p/~1ove..neverdie ";
 			this._client.sendMessage(0, halo);
         }
 
@@ -1528,7 +1528,7 @@ Link Download: "+idU.id+"\n";
             this.cancelAll(seq.to);
         }else if(txt == "!cancel" && !isAdminOrBot(seq.from_)){this._sendMessage(seq,"Not permitted !");}
 
-        if(txt == '!halo') {
+        if(txt == '!hello') {
 			let { mid, displayName } = await this._client.getProfile();
             this._sendMessage(seq, 'สวัสดี'+displayName);
         }
@@ -1630,7 +1630,7 @@ Link Download: "+idU.id+"\n";
 			this._sendMessage(seq, "Done !");
 		}
 		
-        const sp = ['!speed','sp','speed','resp','respon'];
+        const sp = ['!speed','!sp','speed','resp','respon'];
         if(sp.includes(txt) && !isBanned(banList, seq.from_)) {
 			const curTime = (Date.now() / 1000);let M = new Message();M.to=seq.to;M.text = '';M.contentType = 1;M.contentPreview = null;M.contentMetadata = null;
 			await this._client.sendMessage(0,M);
@@ -1662,15 +1662,15 @@ Link Download: "+idU.id+"\n";
             }
         }else if(txt === '!kickall' && !isAdminOrBot(seq.from_) && seq.toType == 2){this._sendMessage(seq,"Not permitted !");}
 		
-		if(txt == '!key') {
+		if(txt == '!help') {
 			let botOwner = await this._client.getContacts([myBot[0]]);
             let { mid, displayName } = await this._client.getProfile();
 			let key2 = "\n\
 ====================\n\
-| BotName   : "+displayName+"\n\
-| BotID     : \n["+mid+"]\n\
-| BotStatus : Working\n\
-| BotOwner  : "+botOwner[0].displayName+"\n\
+|Bot.Name :  "+displayName+"\n\
+|Bot.MID: "+mid+"\n\
+|Bot. J.S :  ✯✯❇Thailand❇✯✯\n\
+|Bot.Owner : "+botOwner[0].displayName+"\n\
 ====================\n";
 			seq.text = key2 += this.keyhelp;
 			this._client.sendMessage(0, seq);
@@ -1681,7 +1681,7 @@ Link Download: "+idU.id+"\n";
             for (var i = 0; i < listMember.length; i++) {
                 if(listMember[i].mid==param){
 					let namanya = listMember[i].dn;
-					seq.text = 'Halo @'+namanya+', Selamat datang bro ! Salam Kenal ^_^';
+					seq.text = 'สวัสดีคุณ @'+namanya+'\nเข้าใหม่! แนะนำตัวให้เพิ้ลๆรู้จักกันหน่อย..😘\nมาจากสายการบินไหน 👀 ล้อเล่น!  จาก..สังกัดไหนค๊าบ';
 					let midnya = listMember[i].mid;
 					let kata = seq.text.split("@").slice(0,1);
 					let kata2 = kata[0].split("");
