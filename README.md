@@ -1,12 +1,12 @@
-Server MAN-PC
+Server Jo-PC
 --------------
 - Cloud9 -> `pkg install coreutils`
 - Cloud9 -> `apt install git`
 - Cloud9 -> `pkg install nano`
 - Cloud9 -> `pkg install nodejs-current`
 - Cloud9 -> `pkg install nodejs-current-dev`
-- Cloud9 -> `git clone` https://github.com/Selfbotman/MAN-PC
-- Cloud9 -> `cd MAN-PC && npm install`
+- Cloud9 -> `git clone` https://github.com/tinnakorn941/KIE-PC.git
+- Cloud9 -> `cd Jo-PC && npm install`
 - Cloud9 -> `cd src` npm start
 
 # alphat-third
